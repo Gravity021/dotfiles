@@ -1,3 +1,5 @@
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 return {
     "rmagatti/auto-session",
     lazy = false,
@@ -9,5 +11,5 @@ return {
         suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/", "c:/Program Files/Neovide" },
         -- log_level = 'debug',
         auto_restore = false,
-    },
+    }
 }

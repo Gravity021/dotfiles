@@ -1,10 +1,15 @@
-require ("config.lazy")
+require("config.lazy")
 
 vim.opt.number = true
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { "java", "python", "lua", "c", "cpp" },
+  callback = function() vim.treesitter.start() end,
+})
 
 if vim.fn.has("Windows_NT") then
     vim.opt.clipboard = "unnamed"
